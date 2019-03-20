@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
+  <entry>
+    <title><![CDATA[谷歌浏览器插件推荐]]></title>
+    <url>%2F2019%2F01%2F30%2F%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90%2F</url>
+    <content type="text"><![CDATA[适用于Github的插件 MathJax Plugin for GIthubGithub的Markdown不支持mathjax的公式渲染，转化为图片的格式内嵌到Markdown中会使工作量增大，可使用MathJax Plugin for Github解决,效果如图：使用前： 使用后： OctotreeGitHub可以在线查看项目中的源代码，文档，以及像图片一类的资源文件，但体验相当糟糕，只能重复地点进一个文件夹，再进入其中一个文件夹，如此循环,可使用octotree解决这一问题，效果如图： GitHub Hovercard使用这款插件，当你将鼠标停留在 GitHub 网站的用户头像或者仓库链接地址上时，会自动弹出一个悬浮框，带你提前预览基本信息。有点类似 StackOverflow 网站的用户头像的鼠标悬停效果Hovercard 插件支持的悬停位置更多，包括用户头像，仓库地址，Issue 链接，个人主页等，效果如图： Enhanced Github提供功能包括显示代码仓库的大小，以及其中每个文件的大小和下载链接。使用这款插件，我们再也不用因为需要某个单一文件而被迫下载整个项目源码，尤其是在网速不给力的时，效果如图： 广告净化AdBlock Plus/广告净化器轻松过滤视频广告，CSDN等页面的广告 内存节省神器One Tab用Chrome浏览器浏览网页时，因为页面还没有看完，或是需要反复查看等原因，而舍不得关闭页面，导致在Chrome浏览器中出现了很多标签，这些标签不仅查找起来不方便，还会占用很多内存。如果电脑内存比较少，就可能会出现内存不足的问题。这时，可以使用OneTab，将当前所有打开的标签页全部关闭，整合成为一个列表，显示在一个新打开的名称为”OneTab” 标签页中，查看全部标签也更轻松了。你可以点击恢复某个标签页，也可以全部恢复打开，效果如图： 效率提升MomentumMomentum插件提供自动更换壁纸，自带时钟，任务日历和工作清单等并且无广告，无弹窗，非常适合笔记本使用;效果如图： 其他插件推荐谷歌翻译效果不用多说! Grammarly英文输入时提供语法检查和拼写检查 微博图床上传图片到微博并生成外链的 Chrome 浏览器扩展 Fire Shot捕捉网页截图，可编辑并将它们保存为PDF，JPEG，GIF，PNG或BMP PDF Viewer使用HTML5直接在浏览器中显示PDF文件]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Tools</tag>
+      </tags>
+  </entry>
 </search>
