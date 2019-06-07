@@ -2019,7 +2019,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #423350;
+  background: #f9ff7f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3192,7 +3192,7 @@ pre {
   margin-top: 60px;
   padding: 60px 60px 60px 60px;
   background: #fff;
-  opacity: 1;
+  opacity: 0.93;
   min-height: 500px;
 }
 body {
