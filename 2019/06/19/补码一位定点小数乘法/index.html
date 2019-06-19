@@ -65,7 +65,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="计算机组成原理,">
 
 
 
@@ -76,13 +76,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yan Daojiang">
-<meta property="og:url" content="http://yandaojiang.com/categories/machine-learning/index.html">
+<meta name="description" content="算法">
+<meta name="keywords" content="计算机组成原理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="补码一位定点小数乘法">
+<meta property="og:url" content="http://yandaojiang.com/2019/06/19/补码一位定点小数乘法/index.html">
 <meta property="og:site_name" content="Yan Daojiang">
+<meta property="og:description" content="算法">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/mul.png">
+<meta property="og:updated_time" content="2019-06-19T09:41:36.740Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yan Daojiang">
+<meta name="twitter:title" content="补码一位定点小数乘法">
+<meta name="twitter:description" content="算法">
+<meta name="twitter:image" content="https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/mul.png">
 
 
 
@@ -115,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://yandaojiang.com/categories/machine-learning/">
+  <link rel="canonical" href="http://yandaojiang.com/2019/06/19/补码一位定点小数乘法/">
 
 
 
@@ -123,7 +130,7 @@
 
 
 
-  <title>Category: machine learning | Yan Daojiang</title>
+  <title>补码一位定点小数乘法 | Yan Daojiang</title>
   
 
 
@@ -142,7 +149,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
 
@@ -279,53 +286,252 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>machine learning<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yandaojiang.com/2019/06/19/补码一位定点小数乘法/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yan Daojiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yan Daojiang">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/06/05/统计学习/" itemprop="url">
-              
-                <span itemprop="name">统计学习</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">补码一位定点小数乘法</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-05T23:01:40+08:00" content="2019-06-05">
-          06-05
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-19T17:25:43+08:00">
+                2019-06-19
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  811
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><a id="more"></a>
+<p>通过补码一位定点小数乘法计算<strong>[A*B]补</strong>,已知条件为x和y.</p>
+<p>说明：在运算的过程中和原码一位乘法不同的是，补码一位乘法中符号是参与运算的，运算得到的结果也是补码的形式。</p>
+<p>下面是比较法算法规则：</p>
+<ol>
+<li>被乘数x取双符号位，乘数y取单符号位进行运算，部分积初值为0；</li>
+<li>乘数的最低位增加辅助位0；</li>
+<li>根据y的后两位进行判断，判断规则如下<ul>
+<li>为00或者为11的时候，直接右移一位</li>
+<li>为01的时候，加x的补，然后右移一位</li>
+<li>为10的时候，加-x的补，然后右移一位</li>
+</ul>
+</li>
+<li>最后的一步不用进行右移一位</li>
+</ol>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><img src="https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/mul.png" alt="示例"></p>
+<h2 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h2><p>下面是参考别人的一个c++程序，可用来检验结果</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定点小数补码一位乘（校正法）</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">4</span>;	<span class="comment">// 数值位位数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// a,b联合右移（算术移位）</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">RightMove</span><span class="params">(<span class="built_in">bitset</span>&lt;n + <span class="number">2</span>&gt; &amp;a, <span class="built_in">bitset</span>&lt;n&gt; &amp;b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">	b[n - <span class="number">1</span>] = a[<span class="number">0</span>];</span><br><span class="line">	a &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">	a[n + <span class="number">1</span>] = a[n];	<span class="comment">// 算术右移</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">bitset</span>&lt;n + 2&gt; <span class="keyword">operator</span>+(<span class="built_in">bitset</span>&lt;n + <span class="number">2</span>&gt; a, <span class="built_in">bitset</span>&lt;n + <span class="number">2</span>&gt; b)	<span class="comment">// 求a,b的算术和</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> a.to_ullong() + b.to_ullong();</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">bitset</span>&lt;n + 2&gt; <span class="keyword">operator</span>-(<span class="built_in">bitset</span>&lt;n + <span class="number">2</span>&gt; a, <span class="built_in">bitset</span>&lt;n + <span class="number">2</span>&gt; b)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> a.to_ullong() - b.to_ullong();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">bitset</span>&lt;n + 1&gt; GetComplement(<span class="built_in">bitset</span>&lt;n + <span class="number">1</span>&gt; a)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (a[n])</span><br><span class="line">	&#123;</span><br><span class="line">		a = ~a.to_ullong() + <span class="number">1</span>;</span><br><span class="line">		a.<span class="built_in">set</span>(n);	<span class="comment">// NOTE</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">bitset</span>&lt;2 * n + 1&gt; GetComplement(<span class="keyword">const</span> <span class="built_in">bitset</span>&lt;n + <span class="number">2</span>&gt; high, <span class="keyword">const</span> <span class="built_in">bitset</span>&lt;n&gt; low)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">bitset</span>&lt;2 * n + 1&gt; ans(high.to_string().substr(<span class="number">1</span>) + low.to_string());</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (ans[<span class="number">2</span> * n])</span><br><span class="line">	&#123;</span><br><span class="line">		ans = ~ans.to_ullong() + <span class="number">1</span>;</span><br><span class="line">		ans.<span class="built_in">set</span>(<span class="number">2</span> * n);	<span class="comment">// NOTE</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">bitset</span>&lt;2 * n + 1&gt; ComplementOneMul(<span class="keyword">const</span> <span class="built_in">bitset</span>&lt;n + <span class="number">1</span>&gt; X, <span class="keyword">const</span> <span class="built_in">bitset</span>&lt;n + <span class="number">1</span>&gt; Y)<span class="comment">//传进被乘数X和乘数Y（原码表示）</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">bitset</span>&lt;n + 2&gt; A;							<span class="comment">// A放部分积（最后是积的高位）</span></span><br><span class="line">	<span class="built_in">bitset</span>&lt;n + 2&gt; tmp = GetComplement(X).to_ullong();</span><br><span class="line">	tmp[n + <span class="number">1</span>] = tmp[n];						<span class="comment">// 注意补码最高位的扩展</span></span><br><span class="line">	<span class="keyword">const</span> <span class="built_in">bitset</span>&lt;n + 2&gt; B(tmp);					<span class="comment">// B是X的补码</span></span><br><span class="line">	<span class="built_in">bitset</span>&lt;n&gt; C = GetComplement(Y).to_ullong();	<span class="comment">// C是0.Y1Y2...Yn（乘数补码的数值位）</span></span><br><span class="line">	<span class="keyword">int</span> cd = n;									<span class="comment">// cd是计数器</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> region 核心算法</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (cd--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (C[<span class="number">0</span>])</span><br><span class="line">		&#123;</span><br><span class="line">			A = A + B;		<span class="comment">// 算术加</span></span><br><span class="line">		&#125;</span><br><span class="line">		RightMove(A, C);	<span class="comment">// A,C联合右移</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (Y.test(n))</span><br><span class="line">	&#123;</span><br><span class="line">		A = A - B;			<span class="comment">// 应是+([-X]补)，硬件实现比-([X]补)好，待改进</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> endregion 核心算法</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> GetComplement(A, C);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">bitset</span>&lt;2 * n + 1&gt; DirectMul(<span class="keyword">const</span> <span class="built_in">bitset</span>&lt;n + <span class="number">1</span>&gt; X, <span class="keyword">const</span> <span class="built_in">bitset</span>&lt;n + <span class="number">1</span>&gt; Y)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">const</span> <span class="built_in">bitset</span>&lt;n&gt; x(X.to_ullong());	<span class="comment">// 用截断高位的方法取绝对值</span></span><br><span class="line">	<span class="keyword">const</span> <span class="built_in">bitset</span>&lt;n&gt; y(Y.to_ullong());</span><br><span class="line">	<span class="built_in">bitset</span>&lt;2 * n + 1&gt; ans(x.to_ullong() * y.to_ullong());</span><br><span class="line">	ans[<span class="number">2</span> * n] = X[n] ^ Y[n];			<span class="comment">// 最后单独计算符号位</span></span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">string</span> inputStrX;</span><br><span class="line">	<span class="built_in">string</span> inputStrY;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; inputStrX &gt;&gt; inputStrY)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">const</span> <span class="built_in">bitset</span>&lt;n + 1&gt; X(inputStrX);	<span class="comment">// X是被乘数</span></span><br><span class="line">		<span class="keyword">const</span> <span class="built_in">bitset</span>&lt;n + 1&gt; Y(inputStrY);	<span class="comment">// Y是乘数</span></span><br><span class="line"></span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"ComplementOneMul:\t"</span> &lt;&lt; X &lt;&lt; <span class="string">" * "</span> &lt;&lt; Y &lt;&lt; <span class="string">" = "</span></span><br><span class="line">			&lt;&lt; ComplementOneMul(X, Y) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"DirectMul:\t\t"</span> &lt;&lt; X &lt;&lt; <span class="string">" * "</span> &lt;&lt; Y &lt;&lt; <span class="string">" = "</span></span><br><span class="line">			&lt;&lt; DirectMul(X, Y) &lt;&lt; <span class="built_in">endl</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
+    
+    
+    
 
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----本文结束<i class="fa fa-paw"></i>感谢您的阅读------</div>
+    
+</div>
+
+  
+</div>
+
+<div>
+      
+        
+
+      
+</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Yan Daojiang WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/计算机组成原理/" rel="tag"><i class="fa fa-tag"></i> 计算机组成原理</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/05/统计学习/" rel="next" title="统计学习">
+                <i class="fa fa-chevron-left"></i> 统计学习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -333,6 +539,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -353,8 +563,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -459,6 +678,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-number">1.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">2.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序"><span class="nav-number">3.</span> <span class="nav-text">程序</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -599,6 +834,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -990,26 +1229,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
