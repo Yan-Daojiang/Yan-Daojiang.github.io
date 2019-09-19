@@ -27,6 +27,12 @@ const ap = new APlayer({
       artist: '五月天',
       url: 'https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/rgwmbcxy.mp3',
       cover: 'https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/rgwmbcxy.jpg',
+    },
+    {
+      name: "成名在望",
+      artist: '五月天',
+      url: 'https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/cmzw.mp3',
+      cover: 'https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/cmzw.jpg',
     }
   ]
 })
