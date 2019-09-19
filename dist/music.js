@@ -27,13 +27,6 @@ const ap = new APlayer({
       artist: '五月天',
       url: 'https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/rgwmbcxy.mp3',
       cover: 'https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/rgwmbcxy.jpg',
-    },
-
-    {
-      name: "转眼",
-      artist: '五月天',
-      url: 'https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/zhuanyan.jpg',
-      cover: 'https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/zhuanyan.mp3',
     }
   ]
 })
