@@ -33,7 +33,7 @@ const ap = new APlayer({
       name: "转眼",
       artist: '五月天',
       url: 'https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/zhuanyan.jpg',
-      cover: 'https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/zhuanyan.jpg',
+      cover: 'https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/zhuanyan.mp3',
     }
   ]
 })
