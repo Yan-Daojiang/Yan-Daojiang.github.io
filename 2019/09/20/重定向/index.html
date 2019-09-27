@@ -65,7 +65,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Linux,">
 
 
 
@@ -76,13 +76,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yan Daojiang">
-<meta property="og:url" content="http://yandaojiang.com/archives/2019/09/index.html">
+<meta name="description" content="重定向">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="重定向">
+<meta property="og:url" content="http://yandaojiang.com/2019/09/20/重定向/index.html">
 <meta property="og:site_name" content="Yan Daojiang">
+<meta property="og:description" content="重定向">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-09-20T04:38:19.049Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yan Daojiang">
+<meta name="twitter:title" content="重定向">
+<meta name="twitter:description" content="重定向">
 
 
 
@@ -115,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yandaojiang.com/archives/2019/09/">
+  <link rel="canonical" href="http://yandaojiang.com/2019/09/20/重定向/">
 
 
 
@@ -123,7 +128,7 @@
 
 
 
-  <title>Archive | Yan Daojiang</title>
+  <title>重定向 | Yan Daojiang</title>
   
 
 
@@ -142,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-right page-archive">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
 
@@ -269,247 +274,290 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yandaojiang.com/2019/09/20/重定向/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yan Daojiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yan Daojiang">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">重定向</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-20T11:08:44+08:00">
+                2019-09-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        Um..! 10 posts in total. Keep on posting.
-      </span>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1.4k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><a id="more"></a>
+<p>命令行最酷的功能–<strong>I/O重定向</strong>，这个功能可把命令行的输入重定向为从文件的内容，也可以将命令行的输出结果重定向到文件中。如果将多个命令行关联起来，还将相乘非常强大的命令–<strong>管道</strong>.</p>
+<h3 id="标准输入、标准输出和标准错误"><a href="#标准输入、标准输出和标准错误" class="headerlink" title="标准输入、标准输出和标准错误"></a>标准输入、标准输出和标准错误</h3><p>I/O重定向功能可以改变输出内容发送的目的地，也可以改变输入的来源，通常，输出显示在屏幕，输入来自于键盘，但是使用I/O重定向可以改变这一惯例。</p>
+<h4 id="标准输出重定向"><a href="#标准输出重定向" class="headerlink" title="标准输出重定向"></a>标准输出重定向</h4><p>I/O重定向功能可以重新定义标准输出内容发送到哪里，使用重定向操作符<code>&gt;</code>后面接文件名就可将标准输出重定向到另一个文件中。仅仅使用了重定向符，前面不加任何命令就可以删除一个已经存在的文件内容或者创建一个新的空文件。</p>
+<p>如果需要从文件的尾部进行添加输出内容，可以使用重定向符<code>&gt;&gt;</code>来实现。</p>
+<h4 id="标准错误重定向"><a href="#标准错误重定向" class="headerlink" title="标准错误重定向"></a>标准错误重定向</h4><p>一个程序可以将生成的输出发送到任意文件流中，如果将这些文件流分别对应标准输入文件，标准输出文件和标准错误文件，那么在shell将在内部用文件描述符分别索引他们为0、1、2。标准错误等同于文件描述符2，所以可以用这种表示法来重定向标准错误，如<code>ls -l /bin/usr 2&gt;ls_error.txt</code>.</p>
+<h4 id="将标准输出和标准错误重定向到同个文件"><a href="#将标准输出和标准错误重定向到同个文件" class="headerlink" title="将标准输出和标准错误重定向到同个文件"></a>将标准输出和标准错误重定向到同个文件</h4><p>需要将标准输出和标准初五重定向到同个文件有两种方法，这里仅记录一种，使用<code>&amp;&gt;</code>将标准输出和标准错误都定向到文件中。</p>
+<h4 id="处理不想要的输出"><a href="#处理不想要的输出" class="headerlink" title="处理不想要的输出"></a>处理不想要的输出</h4><p>有时命令执行后并不希望得到输出，而是想把这个输出丢弃，系统提供了一种方法，即通过吧输出重定向到一个称为/dev/null的特殊文件来实现。</p>
+<h4 id="标准输入重定向"><a href="#标准输入重定向" class="headerlink" title="标准输入重定向"></a>标准输入重定向</h4><p>先介绍一个命令——<code>cat</code>，<code>cat</code>命令读取一个或者多个文件，并把他们复制到标准输出文件中。</p>
+<p>由于<code>cat</code>可以接受多个文件作为输入参数，所以可以用来吧文件连接到一起，例如<code>cat movew.mpeg.0* &gt; movie.mepg</code>.</p>
+<p>如果<code>cat</code>命令没有任何参数，将从标准输入读取内容，即从键盘等待输入。（Ctrl-D可以告知已经到达标准输入的文件尾）。</p>
+<p>下面的一个示例展示标准输入的重定向<code>cat &lt; test.txt</code>,使用重定向符<code>&lt;</code>将标准输入员变为text.txt文件。</p>
+<h3 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h3><p>命令从标准输入到读取数据，并将数据发送到标准输出的能力，是使用了名为管道的shell特性。使用管道操作符<code>|</code>可以吧一个名利的标准输出传送到另一个命令的标准输入中，使用方式为<code>command1 | command2</code>,例如<code>ls -l /usr/bin | less</code>.</p>
+<h4 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h4><p>管道功能常用来度数据进行复杂的操作，也可以将多条命令合在一起构成一个管道，这种用到的命令通常被称为过滤器。</p>
+<p>过滤器接受输入，按照某种方式对输入进行改变，然后再输出它，例如<code>ls /bin /usr/bin | sort |less</code>.</p>
+<h4 id="报告或忽略文件中重复的行"><a href="#报告或忽略文件中重复的行" class="headerlink" title="报告或忽略文件中重复的行"></a>报告或忽略文件中重复的行</h4><p><code>uniq</code>命令常和<code>sort</code>命令结合使用，<code>uniq</code>接受来自标准输入或者某个单一文件名参数对用的已经排好序的数据列表。默认情况下，该命令删除列表中重复的行，因此在管道中添加<code>uniq</code>命令，可以确保所有的列表中没有重复的行，例如<code>ls /bin /usr/bin | sort | uniq | less</code>.</p>
+<p>如果想要查看重复行列表可以在命令后面添加<code>-d</code>选项,如<code>ls /bin /usr/bin | sort | uniq -d | less</code>.</p>
+<h4 id="打印行数，字数和字节数"><a href="#打印行数，字数和字节数" class="headerlink" title="打印行数，字数和字节数"></a>打印行数，字数和字节数</h4><p><code>wc</code>命令用来显示文件中包含的行数，字数和字节数，如<code>wc output.txt</code>,使用<code>-l</code>选项将只报告行数。</p>
+<h4 id="打印匹配行"><a href="#打印匹配行" class="headerlink" title="打印匹配行"></a>打印匹配行</h4><p><code>grep</code>是一个强大的程序，用来在文件中查找匹配的文本，使用方式如下： <code>grep pattern [file...]</code>,<code>grep</code>能够匹配的模式内容可以是非常复杂的。<code>grep</code>命令还有一对非常方便的选项:<code>-i</code>使得搜索时忽略大小写，<code>-v</code>使得只输出和模式不匹配的行。</p>
+<h4 id="打印文件的开头-结尾部分"><a href="#打印文件的开头-结尾部分" class="headerlink" title="打印文件的开头/结尾部分"></a>打印文件的开头/结尾部分</h4><p><code>head/tail</code>命令默认处处文件的前/后10行，使用<code>-n</code>选项可以调整输出选项，例如<code>head -n 5 output.txt</code>.</p>
+<p><code>tail</code>中有个选项可以用来实时查看文件，该选项在观察被写入的日志文件进展状态非常方便。</p>
+<p>例如<code>tail -f /var/log/message</code>,使用<code>-f</code>选项，tail将持续监视这个文件，一旦添加了新行，新行就会立即显示在屏幕上（该动作在ctrl-c后停止）。</p>
+<h4 id="从stdin读取数据，并同时输出到stdout和文件"><a href="#从stdin读取数据，并同时输出到stdout和文件" class="headerlink" title="从stdin读取数据，并同时输出到stdout和文件"></a>从stdin读取数据，并同时输出到stdout和文件</h4><p><code>tee</code>程序读取标准输入，再把读取的内容复制到标准输出和一个或多个文件中，当在某个中间处理阶段来捕获管道中的内容时会很有用。例如：<code>ls /usr/bin | tee ls.txt | grep zip</code>,在过滤管道内容之前先使用<code>tee</code>命令来获取整个目录列表并输出到ls.txt文件中。</p>
+
+      
+    </div>
+    
+    
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----本文结束<i class="fa fa-paw"></i>感谢您的阅读------</div>
+    
+</div>
+
+  
+</div>
+
+<div>
+      
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/09/20/重定向/">重定向</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Yan Daojiang 的个人博客">Yan Daojiang</a></p>
+  <p><span>发布时间:</span>2019年09月20日 - 11:08</p>
+  <p><span>最后更新:</span>2019年09月20日 - 12:38</p>
+  <p><span>原始链接:</span><a href="/2019/09/20/重定向/" title="重定向">http://yandaojiang.com/2019/09/20/重定向/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yandaojiang.com/2019/09/20/重定向/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          icon: "success",
+          showConfirmButton: true
+          });
+	});
+    });
+</script>
+
+
+      
+</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Yan Daojiang WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
         
+
         
 
         
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
           </div>
         
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/27/The-key-differences-between-pointers-and-references/" itemprop="url">
-              
-                <span itemprop="name">The key differences between pointers and references</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-27T12:35:36+08:00" content="2019-09-27">
-          09-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        </div>
+      
       
 
-        
-        
-        
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/19/关于命令/" rel="next" title="关于命令">
+                <i class="fa fa-chevron-left"></i> 关于命令
+              </a>
+            
+          </div>
 
-        
-        
+          <span class="post-nav-divider"></span>
 
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/20/重定向/" itemprop="url">
-              
-                <span itemprop="name">重定向</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-20T11:08:44+08:00" content="2019-09-20">
-          09-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/27/The-key-differences-between-pointers-and-references/" rel="prev" title="The key differences between pointers and references">
+                The key differences between pointers and references <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/19/关于命令/" itemprop="url">
-              
-                <span itemprop="name">关于命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-19T13:37:41+08:00" content="2019-09-19">
-          09-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/18/Mysql通配符/" itemprop="url">
-              
-                <span itemprop="name">Mysql通配符</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-18T23:23:47+08:00" content="2019-09-18">
-          09-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/18/通配符/" itemprop="url">
-              
-                <span itemprop="name">通配符</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-18T22:08:37+08:00" content="2019-09-18">
-          09-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/18/文件与目录操作/" itemprop="url">
-              
-                <span itemprop="name">文件与目录操作</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-18T21:15:44+08:00" content="2019-09-18">
-          09-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-    </div>
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -517,6 +565,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -537,8 +589,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -643,6 +704,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#重定向"><span class="nav-number">1.</span> <span class="nav-text">重定向</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标准输入、标准输出和标准错误"><span class="nav-number">1.1.</span> <span class="nav-text">标准输入、标准输出和标准错误</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标准输出重定向"><span class="nav-number">1.1.1.</span> <span class="nav-text">标准输出重定向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准错误重定向"><span class="nav-number">1.1.2.</span> <span class="nav-text">标准错误重定向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将标准输出和标准错误重定向到同个文件"><span class="nav-number">1.1.3.</span> <span class="nav-text">将标准输出和标准错误重定向到同个文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#处理不想要的输出"><span class="nav-number">1.1.4.</span> <span class="nav-text">处理不想要的输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准输入重定向"><span class="nav-number">1.1.5.</span> <span class="nav-text">标准输入重定向</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#管道"><span class="nav-number">1.2.</span> <span class="nav-text">管道</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤器"><span class="nav-number">1.2.1.</span> <span class="nav-text">过滤器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#报告或忽略文件中重复的行"><span class="nav-number">1.2.2.</span> <span class="nav-text">报告或忽略文件中重复的行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打印行数，字数和字节数"><span class="nav-number">1.2.3.</span> <span class="nav-text">打印行数，字数和字节数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打印匹配行"><span class="nav-number">1.2.4.</span> <span class="nav-text">打印匹配行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打印文件的开头-结尾部分"><span class="nav-number">1.2.5.</span> <span class="nav-text">打印文件的开头/结尾部分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从stdin读取数据，并同时输出到stdout和文件"><span class="nav-number">1.2.6.</span> <span class="nav-text">从stdin读取数据，并同时输出到stdout和文件</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -783,6 +860,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1174,26 +1255,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
