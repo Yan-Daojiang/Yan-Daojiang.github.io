@@ -6,7 +6,7 @@
 
 
 <html class="theme-next mist use-motion" lang="default">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -400,6 +400,7 @@
 <h4 id="显示命令的使用信息"><a href="#显示命令的使用信息" class="headerlink" title="显示命令的使用信息"></a>显示命令的使用信息</h4><p>很多可执行程序都支持<code>--help</code>选项，该选项描述了命令支持的语法和选项，如<code>mkdir --help</code></p>
 <h4 id="显示程序手册页"><a href="#显示程序手册页" class="headerlink" title="显示程序手册页"></a>显示程序手册页</h4><p>大多数供命令行使用的可执行文件，提供了一个称之为manual或man page的正式文档，可以使用一种称之为<code>man</code>的特殊分页程序查看，如<code>man ls</code>,在显示手册时，<code>less</code>命令都能奏效。</p>
 <p><code>man</code>命令显示的“手册文档”被分为多个部分，不仅包含用户命令，也包含管理命令，程序接口等，手册的安排结构如下表：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -442,13 +443,15 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>有时需要查看具体的部分，以查找我们需要的信息。例如当我们查找的有个文件格式同时是一个命令名时，这点就尤为重要，为指明具体部分，使用的方式为<code>man section search_term</code>，如<code>man 5 passwd</code></p>
-<h4 id="显示合适的命令"><a href="#显示合适的命令" class="headerlink" title="显示合适的命令"></a>显示合适的命令</h4><p><code>apropos</code>–显示合适的命令，我们有时需要通过搜索参考手册列表，才进行基于某个搜索条目的匹配。例如使用floppy为搜索条目，搜索参考手册：<code>apropos floppy</code>.</p>
+<h4 id="显示合适的命令"><a href="#显示合适的命令" class="headerlink" title="显示合适的命令"></a>显示合适的命令</h4><p><code>apropos</code>—显示合适的命令，我们有时需要通过搜索参考手册列表，才进行基于某个搜索条目的匹配。例如使用floppy为搜索条目，搜索参考手册：<code>apropos floppy</code>.</p>
 <p>在输出中，第一个字段为手册页的名称，第二个字段显示部分。</p>
 <p>注意：带有-k选项的<code>man</code>命令和<code>apropos</code>命令功能上基本一致.</p>
 <h4 id="显示命令的简要描述"><a href="#显示命令的简要描述" class="headerlink" title="显示命令的简要描述"></a>显示命令的简要描述</h4><p><code>whatis</code>显示匹配具体关键字的手册页的名字和一行描述。</p>
 <h4 id="显示程序的info条目"><a href="#显示程序的info条目" class="headerlink" title="显示程序的info条目"></a>显示程序的info条目</h4><p>GNU项目提供了info页面来代替手册文档，info页面使用超链接与网页的结构类似。</p>
 <p>info程序读取info文件，该文件为属性结构，分为单独的节点，每个结点包含一个主题。info文件包含的的超链接可以实现节点间的跳转，通过星号识别超链接，回车跳转。下面是info命令：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -491,6 +494,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h4 id="README和其他程序文档"><a href="#README和其他程序文档" class="headerlink" title="README和其他程序文档"></a>README和其他程序文档</h4><p>系统中安装的很多软件包都有自己的文档文件，他们存放在/usr/share/doc目录中。大部分以纯文本形式存储，可以用<code>less</code>命令查看，可能遇到有些以.gz扩展名结尾，表明经过gzip压缩程序压缩，可以用<code>zless</code>来显示由gzip压缩的文本文件内容。</p>
 <h3 id="使用别名创建自己的命令"><a href="#使用别名创建自己的命令" class="headerlink" title="使用别名创建自己的命令"></a>使用别名创建自己的命令</h3><h4 id="命令行技巧"><a href="#命令行技巧" class="headerlink" title="命令行技巧"></a>命令行技巧</h4><p>通过分号分隔多条命令就可以将多条命令输入在一行中，<code>command1;command2;command3...</code></p>
 <h4 id="创建自己的命令"><a href="#创建自己的命令" class="headerlink" title="创建自己的命令"></a>创建自己的命令</h4><p>我们可以通过<code>alias</code>命令将多条命令整合成一条命令。首先需要为新命令虚构一个名字（输入前最好检查虚构的新名称是否已经被使用了），然后按照<code>alias newname=&#39;command1;command2...&#39;</code>这个结构进行创建；如果要删除别名可以使用<code>unalias</code>命令。</p>
@@ -700,7 +704,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -722,7 +726,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -845,7 +849,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8.9k字</span>
+  <span class="post-count">博客全站共9.6k字</span>
 </div>
 
         
@@ -1364,6 +1368,6 @@
 <script type="text/javascript" src="/js/src/clipboard.min.js"></script>
 <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 
 </html>

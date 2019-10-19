@@ -65,7 +65,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="计算机系统,">
 
 
 
@@ -76,13 +76,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yan Daojiang">
-<meta property="og:url" content="http://yandaojiang.com/categories/software-engineering/index.html">
+<meta name="description" content="Amdahl定律">
+<meta name="keywords" content="计算机系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Amdahl定律">
+<meta property="og:url" content="http://yandaojiang.com/2019/10/19/Amdahl定律/index.html">
 <meta property="og:site_name" content="Yan Daojiang">
+<meta property="og:description" content="Amdahl定律">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-10-19T07:35:36.808Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yan Daojiang">
+<meta name="twitter:title" content="Amdahl定律">
+<meta name="twitter:description" content="Amdahl定律">
 
 
 
@@ -115,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yandaojiang.com/categories/software-engineering/">
+  <link rel="canonical" href="http://yandaojiang.com/2019/10/19/Amdahl定律/">
 
 
 
@@ -123,7 +128,7 @@
 
 
 
-  <title>Category: software engineering | Yan Daojiang</title>
+  <title>Amdahl定律 | Yan Daojiang</title>
   
 
 
@@ -142,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
 
@@ -269,53 +274,247 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>software engineering<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yandaojiang.com/2019/10/19/Amdahl定律/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yan Daojiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yan Daojiang">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/03/23/编程乐趣与烦恼/" itemprop="url">
-              
-                <span itemprop="name">编程乐趣与烦恼</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Amdahl定律</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-23T22:03:43+08:00" content="2019-03-23">
-          03-23
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-19T14:19:36+08:00">
+                2019-10-19
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  649
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Amdahl定律"><a href="#Amdahl定律" class="headerlink" title="Amdahl定律"></a>Amdahl定律</h3><a id="more"></a>
+<p>Gene Amdahl, 计算领域的早期先锋之一， 对提升系统的某一部分性能所带来的效果做出了简单却有见地的观察，这个观察被称为Amdahl定律（Amdahl’s law, 阿姆达尔定律）.</p>
+<p>定律的主要思想是<strong>当我们对系统的某个部分加速时，其对系统整体性能的影响取决于该部分的重要性和加速程度</strong>.</p>
+<p>若系统执行某应用程序需要的时间为 $T_{\text {old }}$ .假设系统的某部分所需的执行时间与该随时间的比例为$\alpha$,而该部分系统性能提升比例为$k$.即该部分初始所需时间为$\alpha T_{\mathrm{old}}$，现在所需时间为$\left(\alpha T_{\mathrm{old}}\right) / k$.因此，总的执行时间为：</p>
+<p><script type="math/tex">T_{\text {new }}=(1-\alpha) T_{\text {old }}+\left(\alpha T_{\text {old }}\right) / k=T_{\text {old }}[(1-\alpha)+\alpha / k]​</script>,</p>
+<p>由此，计算加速比$S=T_{\mathrm{old}} / T_{\mathrm{new}}$为：</p>
+<p><script type="math/tex">S=\frac{1}{(1-\alpha)+\alpha / k}</script>.</p>
+<p>举例，考虑这样一种情况，系统的某个部分初始耗时为$60 \%(\alpha=0.6)​$，其加速比例因子为$3（k=3）​$。则我们获得的加速比为$1 /[0.4+0.6 / 3]=1.67​$倍.虽然我们对系统的一个主要部分进行了重大改进，但是获得的系统加速比却明显小于这部分的加速比.</p>
+<p>通过上面的例子，也可以看出Amdahl定律的主要观点——<strong>要想加速整个系统，必须提升全系统中相当大部分的速度</strong>.</p>
+<p>现在，我们考虑Amdahl定律的一个有趣的特殊情况：$k$趋向于$\infty$时的效果.这意味着我们可以取系统的某一个部分将其加速到一个点，在这个点上，这部分花费的时间可以忽略不计，于是得到</p>
+<p><script type="math/tex">S_{\infty}=\frac{1}{(1-\alpha)}</script>.</p>
+<p>举例来说，如果$60 \%$的系统能够加速到不花时间的程度，我们获取的净加速比将仍只有$1 / 0.4=2.5 \times$.</p>
+<p>Amdahl定律描述了改善任何过程的一般原则，除了可以用在加速计算机系统方面之外，它还可以用在公司试图降低制造成本，或者学生想要提升绩点的平均值方面。也许它在计算机世界里是最有意义的，这里我们通常把性能提升$2​$倍或者更高的比列因子。这么高的比列因子只有通过优化系统的大部分组件才能获取.</p>
 
       
     </div>
+    
+    
+    
 
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----本文结束<i class="fa fa-paw"></i>感谢您的阅读------</div>
+    
+</div>
+
+  
+</div>
+
+<div>
+      
+        
+
+      
+</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Yan Daojiang WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/计算机系统/" rel="tag"><i class="fa fa-tag"></i> 计算机系统</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/27/The-key-differences-between-pointers-and-references/" rel="next" title="The key differences between pointers and references">
+                <i class="fa fa-chevron-left"></i> The key differences between pointers and references
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -323,6 +522,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -343,8 +546,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -449,6 +661,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Amdahl定律"><span class="nav-number">1.</span> <span class="nav-text">Amdahl定律</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -589,6 +817,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
