@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[大小端测试]]></title>
+    <url>%2F2019%2F10%2F20%2F%E5%A4%A7%E5%B0%8F%E7%AB%AF%E6%B5%8B%E8%AF%95%2F</url>
+    <content type="text"><![CDATA[大端法小端法测试 测试程序下面的程序段使用强制类型转换来访问和打印不同程序对象的字节表示. 首先将数据类型byte_pointer定义为一个指向类型为unsinged char的对象指针，这样一个字节指针引用一个字节序列，其中每个字节都被认为是一个非负整数. 12345678910111213141516171819202122232425262728293031323334353637383940414243#include &lt;stdio.h&gt;typedef unsigned char *byte_pointer;void show_bytes(byte_pointer start, size_t len)&#123; size_t i; for (i = 0; i &lt; len; i++) printf(" %.2x", start[i]); printf("\n");&#125;void show_int(int x)&#123; show_bytes((byte_pointer) &amp;x, sizeof(int));&#125;void show_float(float x)&#123; show_bytes((byte_pointer) &amp;x, sizeof(x));&#125;void show_pointer(void *x)&#123; show_bytes((byte_pointer) &amp;x, sizeof(void *));&#125;void test_show_bytes(int val)&#123; int ival = val; float fval = (float) ival; int *pval = &amp;ival; show_int(ival); show_float(fval); show_pointer(pval);&#125;int main()&#123; int testVal = 12345; test_show_bytes(testVal); return 0;&#125; 测试结果对于上面的程序分别在64位的windows机器和64位的Linux机器上进行编译运行，其中参数$12345$的_十六进制表示_为$0x00003039$. 64位windows系统 64位Linux系统 结果分析 对于int类型的数据，我们在windows和Linux64上都都得到了相同的结果，同时，最低有效字节$0x39$最先输出,说明它们是小端法机器； 同样地，对于float类型的数据结果也是相同的； 对于两种机器的指针值是完全不同的，说明不同的机器/操作系统使用不同的存储分配规则； 64位windows机器采用的是4字节地址，而Linux64使用的是8字节地址.]]></content>
+      <tags>
+        <tag>Computer System</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Amdahl定律]]></title>
     <url>%2F2019%2F10%2F19%2FAmdahl%E5%AE%9A%E5%BE%8B%2F</url>
     <content type="text"><![CDATA[Amdahl定律 Gene Amdahl, 计算领域的早期先锋之一， 对提升系统的某一部分性能所带来的效果做出了简单却有见地的观察，这个观察被称为Amdahl定律（Amdahl’s law, 阿姆达尔定律）. 定律的主要思想是当我们对系统的某个部分加速时，其对系统整体性能的影响取决于该部分的重要性和加速程度. 若系统执行某应用程序需要的时间为 $T_{\text {old }}$ .假设系统的某部分所需的执行时间与该随时间的比例为$\alpha$,而该部分系统性能提升比例为$k$.即该部分初始所需时间为$\alpha T_{\mathrm{old}}$，现在所需时间为$\left(\alpha T_{\mathrm{old}}\right) / k$.因此，总的执行时间为： T_{\text {new }}=(1-\alpha) T_{\text {old }}+\left(\alpha T_{\text {old }}\right) / k=T_{\text {old }}[(1-\alpha)+\alpha / k]​, 由此，计算加速比$S=T_{\mathrm{old}} / T_{\mathrm{new}}$为： S=\frac{1}{(1-\alpha)+\alpha / k}. 举例，考虑这样一种情况，系统的某个部分初始耗时为$60 \%(\alpha=0.6)​$，其加速比例因子为$3（k=3）​$。则我们获得的加速比为$1 /[0.4+0.6 / 3]=1.67​$倍.虽然我们对系统的一个主要部分进行了重大改进，但是获得的系统加速比却明显小于这部分的加速比. 通过上面的例子，也可以看出Amdahl定律的主要观点——要想加速整个系统，必须提升全系统中相当大部分的速度. 现在，我们考虑Amdahl定律的一个有趣的特殊情况：$k$趋向于$\infty$时的效果.这意味着我们可以取系统的某一个部分将其加速到一个点，在这个点上，这部分花费的时间可以忽略不计，于是得到 S_{\infty}=\frac{1}{(1-\alpha)}. 举例来说，如果$60 \%$的系统能够加速到不花时间的程度，我们获取的净加速比将仍只有$1 / 0.4=2.5 \times$. Amdahl定律描述了改善任何过程的一般原则，除了可以用在加速计算机系统方面之外，它还可以用在公司试图降低制造成本，或者学生想要提升绩点的平均值方面。也许它在计算机世界里是最有意义的，这里我们通常把性能提升$2​$倍或者更高的比列因子。这么高的比列因子只有通过优化系统的大部分组件才能获取.]]></content>
       <tags>
-        <tag>计算机系统</tag>
+        <tag>Computer System</tag>
       </tags>
   </entry>
   <entry>
