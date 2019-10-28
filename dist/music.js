@@ -7,7 +7,7 @@ const ap = new APlayer({
     {
       name: "顽固",
       artist: '五月天',
-      url: 'http://www.ytmp3.cn/down/49118.mp3',
+      url: 'https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/wangu.mp3',
       cover: 'https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/wangu.jpg',
     },
     {

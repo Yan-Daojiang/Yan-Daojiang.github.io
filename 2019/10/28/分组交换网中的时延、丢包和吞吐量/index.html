@@ -65,7 +65,7 @@
 
 
 
-  <meta name="keywords" content="Mysql,">
+  <meta name="keywords" content="计算机网络,">
 
 
 
@@ -76,21 +76,18 @@
 
 
 
-<meta name="description" content="使用通配符进行过滤">
-<meta name="keywords" content="Mysql">
+<meta name="description" content="分组交换网中的时延、丢包和吞吐量">
+<meta name="keywords" content="计算机网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mysql通配符">
-<meta property="og:url" content="http://yandaojiang.com/2019/09/18/Mysql通配符/index.html">
+<meta property="og:title" content="分组交换网中的时延、丢包和吞吐量">
+<meta property="og:url" content="http://yandaojiang.com/2019/10/28/分组交换网中的时延、丢包和吞吐量/index.html">
 <meta property="og:site_name" content="Yan Daojiang">
-<meta property="og:description" content="使用通配符进行过滤">
+<meta property="og:description" content="分组交换网中的时延、丢包和吞吐量">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/%E6%96%87%E7%AB%A02019_1/tongpei%25.png">
-<meta property="og:image" content="https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/%E6%96%87%E7%AB%A02019_1/tongpei_.png">
-<meta property="og:updated_time" content="2019-09-18T15:45:11.383Z">
+<meta property="og:updated_time" content="2019-10-28T03:26:10.769Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mysql通配符">
-<meta name="twitter:description" content="使用通配符进行过滤">
-<meta name="twitter:image" content="https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/%E6%96%87%E7%AB%A02019_1/tongpei%25.png">
+<meta name="twitter:title" content="分组交换网中的时延、丢包和吞吐量">
+<meta name="twitter:description" content="分组交换网中的时延、丢包和吞吐量">
 
 
 
@@ -123,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yandaojiang.com/2019/09/18/Mysql通配符/">
+  <link rel="canonical" href="http://yandaojiang.com/2019/10/28/分组交换网中的时延、丢包和吞吐量/">
 
 
 
@@ -131,7 +128,7 @@
 
 
 
-  <title>Mysql通配符 | Yan Daojiang</title>
+  <title>分组交换网中的时延、丢包和吞吐量 | Yan Daojiang</title>
   
 
 
@@ -291,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yandaojiang.com/2019/09/18/Mysql通配符/">
+    <link itemprop="mainEntityOfPage" href="http://yandaojiang.com/2019/10/28/分组交换网中的时延、丢包和吞吐量/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yan Daojiang">
@@ -308,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mysql通配符</h1>
+          <h1 class="post-title" itemprop="name headline">分组交换网中的时延、丢包和吞吐量</h1>
         
 
         <div class="post-meta">
@@ -320,8 +317,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-18T23:23:47+08:00">
-                2019-09-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-28T10:53:36+08:00">
+                2019-10-28
               </time>
             
 
@@ -352,7 +349,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  340
+                  579
                 </span>
               
 
@@ -368,7 +365,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -389,21 +386,23 @@
       
 
       
-        <h3 id="使用通配符进行过滤"><a href="#使用通配符进行过滤" class="headerlink" title="使用通配符进行过滤"></a>使用通配符进行过滤</h3><a id="more"></a>
-<h4 id="LIKE-操作符"><a href="#LIKE-操作符" class="headerlink" title="LIKE 操作符"></a>LIKE 操作符</h4><p>利用通配符可以创建比较特定的数据搜索模式。</p>
-<p>为在搜索子句中使用通配符，必须使用LIKE操作符。LIKE指示MySQL，后跟的搜索模式利用通配符匹配而不是直接相等匹配进行比较。</p>
-<h4 id="百分号通配符"><a href="#百分号通配符" class="headerlink" title="百分号通配符"></a>百分号通配符</h4><p>在搜索串中，<code>%</code> 表示任何字符出现任何次数（<code>%</code>代表搜索模式中给定位置的0个、1个或多个字符）</p>
-<p>通配符可在搜索模式中的任意位置使用，并且可以使用多个通配符。</p>
-<p><img src="https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/%E6%96%87%E7%AB%A02019_1/tongpei%25.png" alt="tongpei%"></p>
-<p><strong>虽然似乎%通配符可以匹配任何东西，但有一个例外,即NULL</strong></p>
-<h4 id="下划线通配符"><a href="#下划线通配符" class="headerlink" title="下划线通配符"></a>下划线通配符</h4><p>下划线<code>_</code>匹配单个字符而不是多个字符（总是匹配一个字符，不能多也不能少）</p>
-<p><img src="https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/myimage/%E6%96%87%E7%AB%A02019_1/tongpei_.png" alt="tongpei_"></p>
-<h4 id="通配符使用技巧"><a href="#通配符使用技巧" class="headerlink" title="通配符使用技巧"></a>通配符使用技巧</h4><ul>
-<li>不要过度使用通配符。如果其他操作符能达到相同的目的，应该使用其他操作符。</li>
-<li>在确实需要使用通配符时，除非绝对有必要，否则不要把它们用在搜索模式的开始处。把通配符置于搜索模式的开始处，搜索起来是最慢的。</li>
-<li>仔细注意通配符的位置。如果放错地方，可能不会返回想要的数据。</li>
+        <h3 id="分组交换网中的时延、丢包和吞吐量"><a href="#分组交换网中的时延、丢包和吞吐量" class="headerlink" title="分组交换网中的时延、丢包和吞吐量"></a>分组交换网中的时延、丢包和吞吐量</h3><a id="more"></a>
+<h4 id="分组交换网中的时延"><a href="#分组交换网中的时延" class="headerlink" title="分组交换网中的时延"></a>分组交换网中的时延</h4><p>分组从一台主机出发，经过一系列的路由器传输，在另一台主机中结束。当分组沿着这条路径到后继结点该分组在沿途的每个结点都经受了几种不同类型的时延，这些时延中最重要的是<strong>结点处理时延、排队时延、传输时延和传播时延</strong>。</p>
+<h5 id="时延类型"><a href="#时延类型" class="headerlink" title="时延类型"></a>时延类型</h5><ul>
+<li><strong>处理时延</strong>:检查分组首部决定将该分组导向何处所需要的时间就是处理时延的一部分。处理时延也能包括其他的因素，如检查比特级别的差错所需要的时间；</li>
+<li><strong>排队时延</strong>：在队列中，该分组在链路上等待传输时，它经受排队时延。一个特定分组的队列时延长度将取决于先期到达正在排队等待向链路传输的分组数量；</li>
+<li><strong>传输时延</strong>：用$L$比特表示分组的长度，用$R\ bps$（即$b/s$）表示从路由器A到路由器B的链路传输速率,传输时延是$L/R$,是将所有分组比特推向链路所需要的时间；</li>
+<li><strong>传播时延</strong>：一旦一个比特被推向链路，该比特需要向路由器B传播，从起点到路由器B传播所需要的时间就是传播时延。传播时延取决于链路的物理媒体和两台路由器之间的距离。</li>
 </ul>
-
+<blockquote>
+<p><strong>传输时延和传播时延的比较</strong>：</p>
+<p>传输时延是路由器将分组推出所需要的时间，它是分组长度和链路传输速率的函数，而与两台路由器之间的距离无关；</p>
+<p>传播时延是一个比特从一台路由器到另一台路由器传播所需要的时间，是两台路由器之间距离的函数，而与分组长度和链路传输速率无关。</p>
+</blockquote>
+<ul>
+<li><strong>结点总时延</strong>: 如果令$d_{\mathrm{proc}}$、$d_{\mathrm{queue}}$、$d_{\mathrm{trans}}$和$d_{\mathrm{prop}}$分别为处理时延、排队时延、传输时延和传播时延，那么结点的总时延有下式给定：</li>
+</ul>
+<script type="math/tex; mode=display">d_{\text {nodal }}=d_{\text {proe }}+d_{\text {queue }}+d_{\text {trans }}+d_{\text {prop }}</script>
       
     </div>
     
@@ -424,35 +423,6 @@
 <div>
       
         
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-  <!-- JS库 sweetalert 可修改路径 -->
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/09/18/Mysql通配符/">Mysql通配符</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 Yan Daojiang 的个人博客">Yan Daojiang</a></p>
-  <p><span>发布时间:</span>2019年09月18日 - 23:23</p>
-  <p><span>最后更新:</span>2019年09月18日 - 23:45</p>
-  <p><span>原始链接:</span><a href="/2019/09/18/Mysql通配符/" title="Mysql通配符">http://yandaojiang.com/2019/09/18/Mysql通配符/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yandaojiang.com/2019/09/18/Mysql通配符/" aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
-</div>
-<script>
-    var clipboard = new Clipboard('.fa-clipboard');
-    $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({
-          title: "",
-          text: '复制成功',
-          icon: "success",
-          showConfirmButton: true
-          });
-	});
-    });
-</script>
-
 
       
 </div>
@@ -491,7 +461,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Mysql/" rel="tag"><i class="fa fa-tag"></i> Mysql</a>
+            <a href="/tags/计算机网络/" rel="tag"><i class="fa fa-tag"></i> 计算机网络</a>
           
         </div>
       
@@ -519,8 +489,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/18/通配符/" rel="next" title="通配符">
-                <i class="fa fa-chevron-left"></i> 通配符
+              <a href="/2019/10/20/大小端测试/" rel="next" title="大小端测试">
+                <i class="fa fa-chevron-left"></i> 大小端测试
               </a>
             
           </div>
@@ -528,10 +498,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/19/关于命令/" rel="prev" title="关于命令">
-                关于命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -704,7 +670,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用通配符进行过滤"><span class="nav-number">1.</span> <span class="nav-text">使用通配符进行过滤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#LIKE-操作符"><span class="nav-number">1.1.</span> <span class="nav-text">LIKE 操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#百分号通配符"><span class="nav-number">1.2.</span> <span class="nav-text">百分号通配符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下划线通配符"><span class="nav-number">1.3.</span> <span class="nav-text">下划线通配符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通配符使用技巧"><span class="nav-number">1.4.</span> <span class="nav-text">通配符使用技巧</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#分组交换网中的时延、丢包和吞吐量"><span class="nav-number">1.</span> <span class="nav-text">分组交换网中的时延、丢包和吞吐量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分组交换网中的时延"><span class="nav-number">1.1.</span> <span class="nav-text">分组交换网中的时延</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#时延类型"><span class="nav-number">1.1.1.</span> <span class="nav-text">时延类型</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1245,6 +1211,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[分组交换网中的时延、丢包和吞吐量]]></title>
+    <url>%2F2019%2F10%2F28%2F%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2%E7%BD%91%E4%B8%AD%E7%9A%84%E6%97%B6%E5%BB%B6%E3%80%81%E4%B8%A2%E5%8C%85%E5%92%8C%E5%90%9E%E5%90%90%E9%87%8F%2F</url>
+    <content type="text"><![CDATA[分组交换网中的时延、丢包和吞吐量 分组交换网中的时延分组从一台主机出发，经过一系列的路由器传输，在另一台主机中结束。当分组沿着这条路径到后继结点该分组在沿途的每个结点都经受了几种不同类型的时延，这些时延中最重要的是结点处理时延、排队时延、传输时延和传播时延。 时延类型 处理时延:检查分组首部决定将该分组导向何处所需要的时间就是处理时延的一部分。处理时延也能包括其他的因素，如检查比特级别的差错所需要的时间； 排队时延：在队列中，该分组在链路上等待传输时，它经受排队时延。一个特定分组的队列时延长度将取决于先期到达正在排队等待向链路传输的分组数量； 传输时延：用$L$比特表示分组的长度，用$R\ bps$（即$b/s$）表示从路由器A到路由器B的链路传输速率,传输时延是$L/R$,是将所有分组比特推向链路所需要的时间； 传播时延：一旦一个比特被推向链路，该比特需要向路由器B传播，从起点到路由器B传播所需要的时间就是传播时延。传播时延取决于链路的物理媒体和两台路由器之间的距离。 传输时延和传播时延的比较： 传输时延是路由器将分组推出所需要的时间，它是分组长度和链路传输速率的函数，而与两台路由器之间的距离无关； 传播时延是一个比特从一台路由器到另一台路由器传播所需要的时间，是两台路由器之间距离的函数，而与分组长度和链路传输速率无关。 结点总时延: 如果令$d_{\mathrm{proc}}$、$d_{\mathrm{queue}}$、$d_{\mathrm{trans}}$和$d_{\mathrm{prop}}$分别为处理时延、排队时延、传输时延和传播时延，那么结点的总时延有下式给定： d_{\text {nodal }}=d_{\text {proe }}+d_{\text {queue }}+d_{\text {trans }}+d_{\text {prop }}]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[大小端测试]]></title>
     <url>%2F2019%2F10%2F20%2F%E5%A4%A7%E5%B0%8F%E7%AB%AF%E6%B5%8B%E8%AF%95%2F</url>
     <content type="text"><![CDATA[大端法小端法测试 测试程序下面的程序段使用强制类型转换来访问和打印不同程序对象的字节表示. 首先将数据类型byte_pointer定义为一个指向类型为unsinged char的对象指针，这样一个字节指针引用一个字节序列，其中每个字节都被认为是一个非负整数. 12345678910111213141516171819202122232425262728293031323334353637383940414243#include &lt;stdio.h&gt;typedef unsigned char *byte_pointer;void show_bytes(byte_pointer start, size_t len)&#123; size_t i; for (i = 0; i &lt; len; i++) printf(" %.2x", start[i]); printf("\n");&#125;void show_int(int x)&#123; show_bytes((byte_pointer) &amp;x, sizeof(int));&#125;void show_float(float x)&#123; show_bytes((byte_pointer) &amp;x, sizeof(x));&#125;void show_pointer(void *x)&#123; show_bytes((byte_pointer) &amp;x, sizeof(void *));&#125;void test_show_bytes(int val)&#123; int ival = val; float fval = (float) ival; int *pval = &amp;ival; show_int(ival); show_float(fval); show_pointer(pval);&#125;int main()&#123; int testVal = 12345; test_show_bytes(testVal); return 0;&#125; 测试结果对于上面的程序分别在64位的windows机器和64位的Linux机器上进行编译运行，其中参数$12345$的_十六进制表示_为$0x00003039$. 64位windows系统 64位Linux系统 结果分析 对于int类型的数据，我们在windows和Linux64上都都得到了相同的结果，同时，最低有效字节$0x39$最先输出,说明它们是小端法机器； 同样地，对于float类型的数据结果也是相同的； 对于两种机器的指针值是完全不同的，说明不同的机器/操作系统使用不同的存储分配规则； 64位windows机器采用的是4字节地址，而Linux64使用的是8字节地址.]]></content>
