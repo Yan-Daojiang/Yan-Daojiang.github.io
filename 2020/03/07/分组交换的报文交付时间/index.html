@@ -65,7 +65,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="计算机网络,">
 
 
 
@@ -76,13 +76,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yan Daojiang">
-<meta property="og:url" content="http://yandaojiang.com/page/2/index.html">
+<meta name="description" content="首先对在公式中需要的一些变量进行说明：假设我们有 $M bits$ 的报文需要进行发送，采用分组交换的方式进行发送，假设分组的长度（大小）为 $L\ bits$ .假设链路带宽（数据传输速率）为 $R\ bps$ .假设从发送方到接收方的跳步数为 $h$, 路由器 数为 $n$ .那么我们可以得到分组交付时间 $T$的计算公式如下：  \begin{aligned} T &amp;=M / R+(h-1)">
+<meta name="keywords" content="计算机网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分组交换的报文交付时间">
+<meta property="og:url" content="http://yandaojiang.com/2020/03/07/分组交换的报文交付时间/index.html">
 <meta property="og:site_name" content="Yan Daojiang">
+<meta property="og:description" content="首先对在公式中需要的一些变量进行说明：假设我们有 $M bits$ 的报文需要进行发送，采用分组交换的方式进行发送，假设分组的长度（大小）为 $L\ bits$ .假设链路带宽（数据传输速率）为 $R\ bps$ .假设从发送方到接收方的跳步数为 $h$, 路由器 数为 $n$ .那么我们可以得到分组交付时间 $T$的计算公式如下：  \begin{aligned} T &amp;=M / R+(h-1)">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200307152711595.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020030715274274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODkyMzMy,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2020-03-07T08:10:19.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yan Daojiang">
+<meta name="twitter:title" content="分组交换的报文交付时间">
+<meta name="twitter:description" content="首先对在公式中需要的一些变量进行说明：假设我们有 $M bits$ 的报文需要进行发送，采用分组交换的方式进行发送，假设分组的长度（大小）为 $L\ bits$ .假设链路带宽（数据传输速率）为 $R\ bps$ .假设从发送方到接收方的跳步数为 $h$, 路由器 数为 $n$ .那么我们可以得到分组交付时间 $T$的计算公式如下：  \begin{aligned} T &amp;=M / R+(h-1)">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200307152711595.png">
 
 
 
@@ -115,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://yandaojiang.com/page/2/">
+  <link rel="canonical" href="http://yandaojiang.com/2020/03/07/分组交换的报文交付时间/">
 
 
 
@@ -123,7 +131,7 @@
 
 
 
-  <title>Yan Daojiang</title>
+  <title>分组交换的报文交付时间 | Yan Daojiang</title>
   
 
 
@@ -142,8 +150,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
 
@@ -279,9 +286,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -294,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yandaojiang.com/2020/02/19/《计算机网络——自顶向下方法》应用层——文件传输协议：FTP/">
+    <link itemprop="mainEntityOfPage" href="http://yandaojiang.com/2020/03/07/分组交换的报文交付时间/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yan Daojiang">
@@ -311,9 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/19/《计算机网络——自顶向下方法》应用层——文件传输协议：FTP/" itemprop="url">《计算机网络——自顶向下方法》应用层——文件传输协议：FTP</a></h1>
+          <h1 class="post-title" itemprop="name headline">分组交换的报文交付时间</h1>
         
 
         <div class="post-meta">
@@ -325,8 +330,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-19T21:34:56+08:00">
-                2020-02-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-07T15:41:55+08:00">
+                2020-03-07
               </time>
             
 
@@ -379,7 +384,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  714
+                  782
                 </span>
               
 
@@ -416,16 +421,42 @@
       
 
       
-        
-          <h1 id="文件传输协议：FTP"><a href="#文件传输协议：FTP" class="headerlink" title="文件传输协议：FTP"></a>文件传输协议：FTP</h1>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/02/19/《计算机网络——自顶向下方法》应用层——文件传输协议：FTP/" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p><img src="https://img-blog.csdnimg.cn/20200307152711595.png" alt="图1"><br>首先对在公式中需要的一些变量进行说明：假设我们有 $M bits$ 的<strong>报文</strong>需要进行发送，采用分组交换的方式进行发送，假设<strong>分组</strong>的长度（大小）为 $L\ bits$ .假设<strong>链路带宽</strong>（数据传输速率）为 $R\ bps$ .假设从发送方到接收方的<strong>跳步数</strong>为 $h$, <strong>路由器</strong> 数为 $n$ .那么我们可以得到<strong>分组交付时间</strong> $T$的计算公式如下：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+T &=M / R+(h-1) L / R \\
+&=M / R+n L / R
+\end{aligned}
+\tag{1}</script><p>下面给出上面 <strong>公式${1}$</strong> 的推导过程：</p>
+<ul>
+<li>由于采用分组交换的方式，因此从发送开始计时，经过时间$L/R$,源端系统的发送的第一个分组经过一个跳步达到第一个路由器；</li>
+<li>经过第二个$L/R$此时源端系统发送了两个分组，同时第二个第二个路由器也收到了第一个路由器转发的分组；</li>
+<li>重复上面的过程，经过时间$(L/R)*h$，目的端系统收到了第一个分组;</li>
+<li>此后每经过一个时间$L/R$目的端系统就收到一个分组，总的分组数量为$M/L$,同时由于已经接收到了一个分组，因此还需要接收$M/L-1$个分组.<br>由此我们得到总的交付时间的计算公式 <strong>$2$</strong></li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{aligned}
+T &=h* L / R+(M/L-1) L / R \\
+&=M / R+(h-1) L / R
+\end{aligned}
+\tag{2}</script><p>显然我们知道跳步数和路由器数之间存在这样的关系$n=h-1$,将其带入 <strong>公式$2$</strong> 因此我们最后得到的公式为</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+T &=M / R+n L / R
+\end{aligned}
+\tag{3}</script><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>下面我们通过以2009年全国计算机考研中的一道试题来加深对上面推导过程的理解：</p>
+<blockquote>
+<p>在下图所示的采用“存储-转发”方式的分组交换网络中，所有链路的数据传输速率为$100 Mbps$, 分组大小为$1 000 B$ ,其中分组的头部大小为$20 B$. 若主机H1向主机H2发送一个大小为$980 000B$ 的文件，则在不考虑分组拆装时间和传播延迟的情况下，从H1发送开始到H2接收完为止，需要的时间至少是多少？</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/2020030715274274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODkyMzMy,size_16,color_FFFFFF,t_70" alt="图2"><br><strong>【分析&amp;求解】</strong>：由于题目中需要计算的是一个<em>最小</em> 时间，因此我们需要选择图中上面的一条链路进行计算.我们还需要计算$980 000B$的数据需要拆分为多少个分组.由于每个分组大小为$1 000B$，我们假设有$x$个分组，因此可以列出下面方程：</p>
+<script type="math/tex; mode=display">
+1000x = 980000+20x</script><p>解上面方程我们知道有$1000$个分组，由于在发送数据的过程中头部数据也需要进行发送，因此我们按 <strong>公式${1}$</strong> 列出下面的算式计算得到时间$T$：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+T &= (980000+20×1000)×8/100M + 2×1000×8/100M \\
+&=80.16 ms
+\end{aligned}</script><p>因此，从H1发送开始到H2接收完为止，需要的时间至少是80.16ms.</p>
+
       
     </div>
     
@@ -434,398 +465,128 @@
 
 <div>
   
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----本文结束<i class="fa fa-paw"></i>感谢您的阅读------</div>
+    
+</div>
+
+  
 </div>
 
 <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2020/03/07/分组交换的报文交付时间/">分组交换的报文交付时间</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Yan Daojiang 的个人博客">Yan Daojiang</a></p>
+  <p><span>发布时间:</span>2020年03月07日 - 15:41</p>
+  <p><span>最后更新:</span>2020年03月07日 - 16:10</p>
+  <p><span>原始链接:</span><a href="/2020/03/07/分组交换的报文交付时间/" title="分组交换的报文交付时间">http://yandaojiang.com/2020/03/07/分组交换的报文交付时间/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yandaojiang.com/2020/03/07/分组交换的报文交付时间/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          icon: "success",
+          showConfirmButton: true
+          });
+	});
+    });
+</script>
+
+
       
 </div>
 
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Yan Daojiang WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yandaojiang.com/2020/02/19/《计算机网络——自顶向下方法》应用层——Web和HTTP/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yan Daojiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yan Daojiang">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/19/《计算机网络——自顶向下方法》应用层——Web和HTTP/" itemprop="url">《计算机网络——自顶向下方法》应用层——Web和HTTP</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-19T21:32:24+08:00">
-                2020-02-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机网络</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/计算机网络/" rel="tag"><i class="fa fa-tag"></i> 计算机网络</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  1.4k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  4
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Web和HTTP"><a href="#Web和HTTP" class="headerlink" title="Web和HTTP"></a>Web和HTTP</h2>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/02/19/《计算机网络——自顶向下方法》应用层——Web和HTTP/" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-<div>
-  
-</div>
-
-<div>
-      
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yandaojiang.com/2020/02/19/《计算机网络——自顶向下方法》应用层——应用层协议原理/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yan Daojiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yan Daojiang">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/19/《计算机网络——自顶向下方法》应用层——应用层协议原理/" itemprop="url">《计算机网络——自顶向下方法》应用层——应用层协议原理</a></h1>
+        <div class="post-widgets">
         
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-19T21:24:28+08:00">
-                2020-02-19
-              </time>
-            
+        
 
-            
-
-            
-          </span>
-
+        
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机网络</span>
-                  </a>
-                </span>
-
-                
-                
-              
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  1.8k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  6
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="应用层协议原理"><a href="#应用层协议原理" class="headerlink" title="应用层协议原理"></a>应用层协议原理</h2>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/02/19/《计算机网络——自顶向下方法》应用层——应用层协议原理/" rel="contents">
-              Read more &raquo;
-            </a>
           </div>
-          <!--/noindex-->
         
+        </div>
       
-    </div>
-    
-    
-    
-
-<div>
-  
-</div>
-
-<div>
-      
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/19/HTML表格/" rel="next" title="HTML表格">
+                <i class="fa fa-chevron-left"></i> HTML表格
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -835,755 +596,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yandaojiang.com/2020/02/19/《计算机网络——自顶向下方法》计算机网络和因特网/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yan Daojiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yan Daojiang">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/19/《计算机网络——自顶向下方法》计算机网络和因特网/" itemprop="url">《计算机网络——自顶向下方法》计算机网络和因特网</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-19T21:13:25+08:00">
-                2020-02-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机网络</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  1.7k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  5
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="计算机网络和因特网"><a href="#计算机网络和因特网" class="headerlink" title="计算机网络和因特网"></a>计算机网络和因特网</h1>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/02/19/《计算机网络——自顶向下方法》计算机网络和因特网/" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-<div>
-  
-</div>
-
-<div>
-      
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yandaojiang.com/2019/10/20/大小端测试/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yan Daojiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yan Daojiang">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/20/大小端测试/" itemprop="url">大小端测试</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-20T12:11:03+08:00">
-                2019-10-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机系统/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机系统</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  386
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="大端法小端法测试"><a href="#大端法小端法测试" class="headerlink" title="大端法小端法测试"></a>大端法小端法测试</h3>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/20/大小端测试/" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-<div>
-  
-</div>
-
-<div>
-      
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yandaojiang.com/2019/10/19/Amdahl定律/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yan Daojiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yan Daojiang">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/19/Amdahl定律/" itemprop="url">Amdahl定律</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-19T14:19:36+08:00">
-                2019-10-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机系统/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机系统</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  633
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="Amdahl定律"><a href="#Amdahl定律" class="headerlink" title="Amdahl定律"></a>Amdahl定律</h3>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/19/Amdahl定律/" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-<div>
-  
-</div>
-
-<div>
-      
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yandaojiang.com/2019/03/23/编程乐趣与烦恼/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yan Daojiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yan Daojiang">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/23/编程乐趣与烦恼/" itemprop="url">编程乐趣与烦恼</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-23T22:03:43+08:00">
-                2019-03-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/软件工程/" itemprop="url" rel="index">
-                    <span itemprop="name">软件工程</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  1.6k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  5
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>摘录自FrederickP.Brooks.Jr的《人月神话》</p>
-<hr>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/23/编程乐趣与烦恼/" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-<div>
-  
-</div>
-
-<div>
-      
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
 
 
           </div>
@@ -1591,6 +608,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1611,8 +632,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1689,6 +719,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">1.</span> <span class="nav-text">示例</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1829,6 +875,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
