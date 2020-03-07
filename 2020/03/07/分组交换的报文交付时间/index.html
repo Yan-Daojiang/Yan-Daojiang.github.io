@@ -76,20 +76,20 @@
 
 
 
-<meta name="description" content="首先对在公式中需要的一些变量进行说明：假设我们有 $M bits$ 的报文需要进行发送，采用分组交换的方式进行发送，假设分组的长度（大小）为 $L\ bits$ .假设链路带宽（数据传输速率）为 $R\ bps$ .假设从发送方到接收方的跳步数为 $h$, 路由器 数为 $n$ .那么我们可以得到分组交付时间 $T$的计算公式如下：  \begin{aligned} T &amp;=M / R+(h-1)">
+<meta name="description" content="分组交换的报文交付时间">
 <meta name="keywords" content="计算机网络">
 <meta property="og:type" content="article">
 <meta property="og:title" content="分组交换的报文交付时间">
 <meta property="og:url" content="http://yandaojiang.com/2020/03/07/分组交换的报文交付时间/index.html">
 <meta property="og:site_name" content="Yan Daojiang">
-<meta property="og:description" content="首先对在公式中需要的一些变量进行说明：假设我们有 $M bits$ 的报文需要进行发送，采用分组交换的方式进行发送，假设分组的长度（大小）为 $L\ bits$ .假设链路带宽（数据传输速率）为 $R\ bps$ .假设从发送方到接收方的跳步数为 $h$, 路由器 数为 $n$ .那么我们可以得到分组交付时间 $T$的计算公式如下：  \begin{aligned} T &amp;=M / R+(h-1)">
+<meta property="og:description" content="分组交换的报文交付时间">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200307152711595.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/2020030715274274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODkyMzMy,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2020-03-07T08:10:19.938Z">
+<meta property="og:updated_time" content="2020-03-07T08:12:45.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="分组交换的报文交付时间">
-<meta name="twitter:description" content="首先对在公式中需要的一些变量进行说明：假设我们有 $M bits$ 的报文需要进行发送，采用分组交换的方式进行发送，假设分组的长度（大小）为 $L\ bits$ .假设链路带宽（数据传输速率）为 $R\ bps$ .假设从发送方到接收方的跳步数为 $h$, 路由器 数为 $n$ .那么我们可以得到分组交付时间 $T$的计算公式如下：  \begin{aligned} T &amp;=M / R+(h-1)">
+<meta name="twitter:description" content="分组交换的报文交付时间">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200307152711595.png">
 
 
@@ -384,7 +384,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  782
+                  793
                 </span>
               
 
@@ -400,7 +400,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  2
+                  3
                 </span>
               
             </div>
@@ -421,7 +421,8 @@
       
 
       
-        <p><img src="https://img-blog.csdnimg.cn/20200307152711595.png" alt="图1"><br>首先对在公式中需要的一些变量进行说明：假设我们有 $M bits$ 的<strong>报文</strong>需要进行发送，采用分组交换的方式进行发送，假设<strong>分组</strong>的长度（大小）为 $L\ bits$ .假设<strong>链路带宽</strong>（数据传输速率）为 $R\ bps$ .假设从发送方到接收方的<strong>跳步数</strong>为 $h$, <strong>路由器</strong> 数为 $n$ .那么我们可以得到<strong>分组交付时间</strong> $T$的计算公式如下：</p>
+        <h1 id="分组交换的报文交付时间"><a href="#分组交换的报文交付时间" class="headerlink" title="分组交换的报文交付时间"></a>分组交换的报文交付时间</h1><a id="more"></a>
+<p><img src="https://img-blog.csdnimg.cn/20200307152711595.png" alt="图1"><br>首先对在公式中需要的一些变量进行说明：假设我们有 $M bits$ 的<strong>报文</strong>需要进行发送，采用分组交换的方式进行发送，假设<strong>分组</strong>的长度（大小）为 $L\ bits$ .假设<strong>链路带宽</strong>（数据传输速率）为 $R\ bps$ .假设从发送方到接收方的<strong>跳步数</strong>为 $h$, <strong>路由器</strong> 数为 $n$ .那么我们可以得到<strong>分组交付时间</strong> $T$的计算公式如下：</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
 T &=M / R+(h-1) L / R \\
@@ -486,7 +487,7 @@ T &= (980000+20×1000)×8/100M + 2×1000×8/100M \\
   <p><span>本文标题:</span><a href="/2020/03/07/分组交换的报文交付时间/">分组交换的报文交付时间</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Yan Daojiang 的个人博客">Yan Daojiang</a></p>
   <p><span>发布时间:</span>2020年03月07日 - 15:41</p>
-  <p><span>最后更新:</span>2020年03月07日 - 16:10</p>
+  <p><span>最后更新:</span>2020年03月07日 - 16:12</p>
   <p><span>原始链接:</span><a href="/2020/03/07/分组交换的报文交付时间/" title="分组交换的报文交付时间">http://yandaojiang.com/2020/03/07/分组交换的报文交付时间/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yandaojiang.com/2020/03/07/分组交换的报文交付时间/" aria-label="复制成功！"></i></span>
   </p>
@@ -729,7 +730,7 @@ T &= (980000+20×1000)×8/100M + 2×1000×8/100M \\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">1.</span> <span class="nav-text">示例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分组交换的报文交付时间"><span class="nav-number">1.</span> <span class="nav-text">分组交换的报文交付时间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">1.1.</span> <span class="nav-text">示例</span></a></li></ol></li></ol></div>
             
 
           </div>
